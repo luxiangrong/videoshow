@@ -321,6 +321,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
+            'images/*',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
           ]
@@ -423,7 +424,7 @@ module.exports = function (grunt) {
     'uglify',
     'copy:dist',
     'modernizr',
-    'rev',
+    // 'rev',
     'usemin',
     'htmlmin'
   ]);
