@@ -17,7 +17,7 @@ $(document).ready(function() {
         ready: function() {
             $(this).jPlayer("setMedia", {
                 title: "",
-                m4v: "/images/building.mp4",
+                m4v: "images/building.mp4",
             });
 
             $(this).jPlayer("pause", 0.01);
