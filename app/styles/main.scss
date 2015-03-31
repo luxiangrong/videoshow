@@ -1,31 +1,71 @@
 // bower:scss
 // endbower
-
+$font-family-sans-serif: "Helvetica Neue",
+Helvetica,
+"Hiragino Sans GB",
+"Hiragino Sans GB W3",
+"Microsoft YaHei",
+Arial,
+sans-serif !default;
+$font-family-serif: Georgia,
+"Times New Roman",
+Times,
+serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace: Menlo,
+Monaco,
+Consolas,
+"Courier New",
+monospace !default;
 body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+    font: $font-family-sans-serif;
+    background-color: #F6F5F7;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-}
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+.all-wrap {
+    position: relative;
+    .jp-jplayer {
+        top: 300px;
+        width: 612px;
+        position: absolute;
+        left: 50%;
+        margin-left: -306px;
+        background-color: transparent;
+    }
+    .text {
+      position: absolute;
+      top: 200px;
+      width: 100%;
+      text-align: center;
+      font-size: 48px;
+      transition: all 0.5s;
+      color: #333333;
+      &.color-1 {
+        color: #800000;
+      }
+      &.color-2 {
+        color: #365F91;
+      }
+    }
+    .fade {
+      opacity: 0;
+      &.in {
+        opacity: 1;
+      }
+      &.out {
+        opacity: 0;
+      }
+    }
+    .slide-from-left {
+      transform: translate3d(-1920px, 0, 0);
+      &.in {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    .slide-from-right {
+      transform: translate3d(1920px, 0, 0);
+      &.in {
+        transform: translate3d(0, 0, 0);
+      }
+    }
 }
