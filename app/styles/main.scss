@@ -1,24 +1,11 @@
 // bower:scss
 // endbower
-$font-family-sans-serif: "Helvetica Neue",
-Helvetica,
-"Hiragino Sans GB",
-"Hiragino Sans GB W3",
-"Microsoft YaHei",
-Arial,
-sans-serif !default;
-$font-family-serif: Georgia,
-"Times New Roman",
-Times,
-serif !default;
+$font-family-sans-serif: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",Arial,sans-serif !default;
+$font-family-serif: Georgia,"Times New Roman",Times,serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace: Menlo,
-Monaco,
-Consolas,
-"Courier New",
-monospace !default;
+$font-family-monospace: Menlo,Monaco,Consolas,"Courier New",monospace !default;
 body {
-    font: $font-family-sans-serif;
+    font-family: $font-family-sans-serif;
     background-color: #F6F5F7;
 }
 
@@ -32,19 +19,67 @@ body {
         margin-left: -306px;
         background-color: transparent;
     }
-    .text {
+    .intro {
       position: absolute;
-      top: 200px;
+      top: 140px;
       width: 100%;
       text-align: center;
-      font-size: 48px;
       transition: all 0.5s;
       color: #333333;
-      &.color-1 {
-        color: #800000;
+      opacity: 0;
+      &.in {
+        opacity: 1;
       }
-      &.color-2 {
-        color: #365F91;
+      &.out {
+        opacity: 0;
+      }
+      h1 {
+        font-size: 36px;
+        font-weight: normal;
+      }
+      p {
+        font-size: 24px;
+        color: #897676;
+      }
+      &.intro-1 {
+        h1 {
+          color: #2bb09d;
+        }
+      }
+      &.intro-2 {
+        h1 {
+          color: #b02f9c;
+        }
+      }
+      &.intro-3 {
+        h1 {
+          color: #b03535;
+        }
+        
+      }
+      &.intro-4 {
+        top: 90px;
+        h1 {
+          color: #558c29;
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          width: 620px;
+          text-align: center;
+          margin: 0 auto;
+          li {
+            display: inline-block;
+            width: 24%;
+            text-align: center;
+            span {
+              margin-top: 10px;
+              display: block;
+              color: #897676;
+            }
+          }
+        }
       }
     }
     .fade {
